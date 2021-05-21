@@ -17,6 +17,7 @@ app.use('/', (req, res) => {
 
 let messages = [];
 
+
 io.on('connection', socket => {
     console.log(`Socket connectado: ${socket.id}`);
 
@@ -28,4 +29,6 @@ io.on('connection', socket => {
     });
 });
 
-server.listen(3000);
+server.listen(3000,()=>{
+    console.log("Server online")
+});
